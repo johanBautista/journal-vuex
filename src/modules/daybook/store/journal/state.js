@@ -9,7 +9,7 @@ export default () => ({
     },
     {
       id: "2", // 12371298317892
-      date: new Date().toDateString(), // sat 23, julio
+      date: new Date(1).toDateString(), // sat 23, julio
       text: "Voluptate culpa sit ea nisi labore amet fugiat cupidatat duis culpa ex adipisicing enim quis. Ea aliquip laboris Lorem do irure amet qui fugiat. Officia laboris consectetur sint mollit est est aute mollit ut labore quis id do.",
       picture: null, // https://
     },

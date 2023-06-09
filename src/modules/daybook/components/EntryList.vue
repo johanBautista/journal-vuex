@@ -5,13 +5,14 @@
     </div>
 
     <div class="entry-scrollarea">
-      <Entry v-for="entry in 5" :key="entry.id" :entry="entry" />
+      <Entry v-for="entry in entriesByTerm" :key="entry.id" :entry="entry" />
     </div>
   </div>
 </template>
 
 <script>
 import { defineAsyncComponent } from "vue";
+import { mapGetters } from "vuex";
 
 export default {
   components: {
@@ -20,8 +21,13 @@ export default {
   data() {
     return {
       term: "",
-      
     };
+  },
+  computed: {
+    ...mapGetters("journal", ["getEntriesByTerm"]),
+    entriesByTerm() {
+      return this.getEntriesByTerm(this.term);
+    },
   },
 };
 </script>
