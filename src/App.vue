@@ -1,11 +1,17 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <button class="btn btn-primary">jee</button>
+  <!-- <button @click="gotoDaybook" class="btn btn-primary">go to daybook</button> -->
   <router-view />
 </template>
+
+<script>
+export default {
+  methods: {
+    gotoDaybook() {
+      return this.$router.push({ name: "no-entry" });
+    },
+  },
+};
+</script>
 
 <style>
 #app {
